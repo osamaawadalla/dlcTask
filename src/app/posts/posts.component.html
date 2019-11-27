@@ -1,0 +1,17 @@
+<div class="posts">
+  <div class="container">
+    <input class="form-control" type="text" placeholder="Search in posts" #query (keyup)="getItems(query.value)">
+    <h2>Posts</h2>
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let post of filteredPosts">
+        <div class="card" routerLink="/post_details/{{post.id}}">
+          <img src="assets/imgs/post.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.body}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

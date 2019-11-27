@@ -1,0 +1,20 @@
+.user
+{
+    padding: 80px 0;
+}
+.user img 
+{
+    margin-bottom: 30px;
+}
+.user h3 
+{
+    color: #333;
+}
+.user p 
+{
+    color: #666;
+}
+.user p b 
+{
+    color: #333;
+}

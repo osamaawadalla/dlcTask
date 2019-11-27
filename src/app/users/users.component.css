@@ -1,0 +1,21 @@
+.users
+{
+    padding: 80px 0;
+}
+.users input 
+{
+    margin-bottom: 30px;
+}
+.users h2 
+{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.users .card
+{
+    cursor: pointer;
+}
+.users .card .row 
+{
+    align-items: center;
+}

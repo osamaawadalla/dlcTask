@@ -1,0 +1,50 @@
+.profile 
+{
+    padding-bottom: 80px;
+}
+.profile .todo
+{
+    margin-top: 50px;
+}
+.profile .todo select
+{
+    float: right;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+}
+.profile .todo h2 
+{
+    margin-bottom: 20px;
+}
+.profile .todo input.add
+{
+    height: 56px;
+}
+.profile .todo .row 
+{
+    border: 1px solid #ccc;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+.profile .todo .row p 
+{
+    margin: 0;
+}
+.profile .todo .row p.mark
+{
+    text-decoration: line-through;
+}
+.profile .posts 
+{
+    margin-top: 50px;
+}
+.profile .posts input 
+{
+    margin-bottom: 20px;
+}
+.profile .posts h2
+{
+    margin: 20px 0;
+}

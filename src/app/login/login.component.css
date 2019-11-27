@@ -1,0 +1,13 @@
+.login 
+{
+    padding: 80px 0;
+}
+.login .login_form
+{
+    width: 50%;
+    margin: 40px auto;
+}
+.login .login_form h2 
+{
+    margin-bottom: 20px;
+}

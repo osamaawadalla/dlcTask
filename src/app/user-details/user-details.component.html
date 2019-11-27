@@ -1,0 +1,14 @@
+<div class="user text-center">
+  <div class="container">
+    <img src="assets/imgs/avatar.jpg" width="150" height="auto">
+    <h3>{{user?.name}}</h3>
+    <p><b>Username:</b> {{user?.username}}</p>
+    <p><b>Email:</b> {{user?.email}}</p>
+    <p><b>Phone:</b> {{user?.phone}}</p>
+    <p><b>Address:</b> {{user?.address?.suite}}, {{user?.address?.street}}, {{user?.address?.city}}</p>
+    <p><b>Company Name:</b> {{user?.company?.name}}</p>
+    <p><b>Company bs:</b> {{user?.company?.bs}}</p>
+    <p><b>Company catch phrase:</b> {{user?.company?.catchPhrase}}</p>
+    <p><b>Website: </b> <a href="{{user?.website}}" target="_blank">{{user?.website}}</a></p>
+  </div>
+</div>

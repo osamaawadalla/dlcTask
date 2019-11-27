@@ -1,0 +1,54 @@
+<div class="profile">
+  <div class="container">
+
+    <div class="todo">
+      <select (change)="filterTodo(selTodo)" [(ngModel)]="selTodo">
+        <option value="all">All Todos</option>
+        <option value="completed">Completed</option>
+        <option value="notcompleted">Not Completed</option>
+      </select>
+      <h2>Todo List</h2>
+      <form #addTod="ngForm" (ngSubmit)="addTodo(addTod.value)">
+        <div class="form-group">
+          <input type="text" class="form-control add" placeholder="Type a todo and press enter..." name="title" ngModel>
+        </div>
+      </form>
+      <div class="container">
+        <div class="row" *ngFor="let t of filteredTodo; let i = index">
+          <div class="col-1 text-center">
+            <input type="checkbox" (change)="completeTodo(t.id,i)" [disabled]="t.completed" [checked]="t.completed">
+          </div>
+          <div class="col-11">
+            <p [class.mark]="t.completed">{{t.title}}</p>
+          </div>
+          <!-- <div class="col-1 text-center">
+            <i class="fa fa-edit"></i>
+          </div>
+          <div class="col-1 text-center">
+            <i class="fa fa-close"></i>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="posts">
+      <div class="">
+        <h2>Posts</h2>
+        <input class="form-control" type="text" placeholder="Search in posts" #query (keyup)="getItems(query.value)">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let post of filteredPosts">
+            <div class="card" routerLink="/post_details/{{post.id}}">
+              <img src="assets/imgs/post.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">{{post.body}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="btn btn-danger" (click)="logout()">Logout</button> -->
+  </div>
+</div>

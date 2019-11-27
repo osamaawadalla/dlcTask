@@ -1,0 +1,18 @@
+<div class="login">
+  <div class="container">
+    <div class="login_form">
+      <h2 class="text-center">Login</h2>
+      <form #logForm="ngForm" (ngSubmit)="login(logForm.value)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

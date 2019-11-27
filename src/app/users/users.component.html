@@ -1,0 +1,24 @@
+<div class="users">
+  <div class="container">
+    <input class="form-control" type="text" placeholder="Search in users" #query (keyup)="getItems(query.value)">
+    <h2>Users</h2>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let user of filteredUsers">
+        <div class="card mb-3" routerLink="/user_details/{{user.id}}">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/imgs/avatar.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{user.name}}</h5>
+                <p class="card-text">{{user.email}} <br> {{user.phone}}</p>
+                <p class="card-text"><small class="text-muted">{{user.website}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
